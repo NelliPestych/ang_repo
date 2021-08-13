@@ -1,0 +1,9 @@
+.container {
+  font-size: 70px;
+  line-height: 78px;
+  width: 400px;
+  height: 300px;
+  margin: 0 auto;
+  text-align: center;
+  color: blue;
+}
