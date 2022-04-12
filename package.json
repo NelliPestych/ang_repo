@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "node index",
-    "build": "ng build",
+    "build": "ng build --prod",
     "watch": "ng build --watch --configuration development",
     "server": "nodemon index",
     "client-install": "npm install --prefix client",
