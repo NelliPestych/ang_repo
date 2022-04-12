@@ -6,7 +6,10 @@
     "start": "node index",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "server": "nodemon index"
+    "server": "nodemon index",
+    "client-install": "npm install --prefix client",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "private": true,
   "dependencies": {
@@ -23,8 +26,11 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
+    "materialize-css": "^1.0.0-rc.2",
+    "moment": "^2.29.1",
     "mongoose": "^5.13.7",
     "morgan": "^1.10.0",
+    "multer": "^1.4.3",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
     "rxjs": "~6.6.0",
@@ -37,6 +43,7 @@
     "@angular/compiler-cli": "~12.2.0",
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
+    "concurrently": "^7.0.0",
     "jasmine-core": "~3.8.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
