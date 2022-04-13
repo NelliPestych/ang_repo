@@ -1,6 +1,12 @@
 {
   "name": "untitled",
   "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "14.15.4",
+    "npm": "7.20.5"
+  },
   "scripts": {
     "ng": "ng",
     "start": "node index",
@@ -10,7 +16,7 @@
     "client-install": "npm install --prefix client",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "npm run client-install && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run client-install && npm run build --prefix client"
   },
   "private": true,
   "dependencies": {
