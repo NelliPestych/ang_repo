@@ -21,9 +21,8 @@ module.exports.getAll = async function (req, res) {
     if (!query.date) {
       query.date = {}
     }
+    query.date['$lte'] = req.query.end
   }
-
-  query.date['$lte'] = req.query.end
 
   if (req.query.order) {
     query.order = +req.query.order
