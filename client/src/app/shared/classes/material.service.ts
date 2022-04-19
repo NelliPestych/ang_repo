@@ -1,15 +1,15 @@
-import { ElementRef } from "@angular/core";
+import { ElementRef } from '@angular/core';
 
 declare var M: any;
 
 export interface MaterialInstance {
-  open?(): void,
-  close?(): void,
-  destroy?(): void
+  open?(): void;
+  close?(): void;
+  destroy?(): void;
 }
 
 export interface MaterialtDatepicker extends MaterialInstance {
-  date?: Date
+  date?: Date;
 }
 
 export class MaterialService {
@@ -21,23 +21,26 @@ export class MaterialService {
     M.FloatingActionButton.init(ref.nativeElement);
   }
 
-  static updateTextInputs():any {
-    M.updateTextFields()
+  static updateTextInputs(): any {
+    M.updateTextFields();
   }
 
   static initModal(ref: ElementRef): MaterialInstance {
-    return M.Modal.init(ref.nativeElement)
+    return M.Modal.init(ref.nativeElement);
   }
 
   static initTooltip(ref: ElementRef): MaterialInstance {
-    return M.Tooltip.init(ref.nativeElement)
+    return M.Tooltip.init(ref.nativeElement);
   }
 
-  static initDatepicker(ref: ElementRef, onClose: () => void): MaterialtDatepicker {
+  static initDatepicker(
+    ref: ElementRef,
+    onClose: () => void
+  ): MaterialtDatepicker {
     return M.Datepicker.init(ref.nativeElement, {
       format: 'dd.mm.yyyy',
       showClearBtn: true,
-      onClose
-    })
+      onClose,
+    });
   }
 }
